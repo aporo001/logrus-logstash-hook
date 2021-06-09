@@ -65,6 +65,7 @@ func copyEntry(e *logrus.Entry, fields logrus.Fields) *logrus.Entry {
 	ne.Time = e.Time
 	ne.Data = logrus.Fields{}
 	ne.Caller = e.Caller
+	ne.Logger = e.Logger
 	for k, v := range fields {
 		ne.Data[k] = v
 	}
